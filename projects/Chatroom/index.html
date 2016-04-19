@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html ng-app="chatroom">
+  <head>
+    <title>Craig's Corner</title>
+    <link rel="shortcut icon" href="img/earth.ico" type="image/x-icon" >
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body ng-controller="mainCtrl">
+    <main class="card">
+      <div class="card-header"></div>
+              <div class="card-info">
+                  <div class="card-mug"></div>
+                  <h1>Craig's Corner</h1>
+                  <h2>A simple chat website</h2>
+              <form role="form">
+                <div class="form-group">
+                  <input id="message-submit" class="form-control text-box" type="text" ng-model="message" placeholder="What do you want to say?" ng-enter="postData()">
+                </div>
+              </form>
+                  <div class="panel panel-default">
+                    <div class="panel-heading">Messages from those in the corner</div>
+                    <ul class="list-group">
+                      <li class="list-group-item" ng-repeat="message in messages">
+                        <span class="badge">{{formatDate(message.createdAt)}}</span>
+                        {{message.text}}
+                      </li>
+                    </ul>
+                </div>
+              </div>
+    </main>
+    <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.2.19.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/mainCtrl.js"></script>
+    <script src="js/parseService.js"></script>
+    <script src="js/defaultHeaders.js"></script>
+  </body>
+</html>
