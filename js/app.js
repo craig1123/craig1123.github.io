@@ -18,8 +18,8 @@ angular.module('portfolio', ['ui.router'])
       controller: 'workCtrl',
       templateUrl: 'js/work/workTmp.html',
     })
-    .state('resume', {
-      url: '/resume',
+    .state('forFun', {
+      url: '/forFun',
       templateUrl: 'js/forFun/forFun.html',
     })
     .state('contact', {

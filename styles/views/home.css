@@ -301,6 +301,13 @@ a:hover {
   background-color: #e4e4e4;
 }
 
+/*For Fun*/
+
+.full {
+  height: 500px;
+  width: 400px;
+}
+
 /*contact*/
 
 .contact h1{
