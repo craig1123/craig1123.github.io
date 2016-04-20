@@ -12,3 +12,12 @@ angular.module("portfolio").controller("aboutCtrl", function($scope, $http){
      //
     //  getComicCharacters();
 })
+
+$(document).ready(function() {
+  $('.logo').click(function () {
+    $('.col-md-5').animate({right:$('.col-md-7').offset().left});
+    $('.col-md-7').animate({left:$('.col-md-5').offset().left});
+
+
+  });
+});

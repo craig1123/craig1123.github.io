@@ -235,9 +235,10 @@ a:hover {
 .featurette-image {
   border: 2px solid black;
   border-radius: 10px;
-  margin
 }
-
+.featurette-image.img-responsive.center-block {
+  height: 400px;
+}
 /*Work*/
 
 .work {
@@ -261,7 +262,7 @@ a:hover {
 }
 .work-text {
     width: 100%;
-    padding: 12%;
+    padding: 6%;
     color: white;
 		font-size: 25px;
     text-align: center;
@@ -298,4 +299,13 @@ a:hover {
   padding: 0 12px;
   border-radius: 16px;
   background-color: #e4e4e4;
+}
+
+/*contact*/
+
+.contact h1{
+  text-align: center;
+}
+.contact.row{
+  text-align: center;
 }
