@@ -1,4 +1,3 @@
-//change to be a loading gif
 $(window).load(function() {
     $("body").fadeIn("slow");
 });
@@ -95,21 +94,6 @@ $(document).ready(function(){
     $('.nav-icon[id="' + activeId + '-nav"] i').addClass('nav-active');
   });
 
-  // mousewheel
-  $('body').bind('mousewheel DOMMouseScroll', function(e){
-    // if
-    if ($('.slide-section:animated').length > 0) {
-      e.preventDefault();
-    } else {
-      if(e.originalEvent.wheelDelta /120 > 0 || e.originalEvent.detail > 0) {
-        prevSlide();
-      }
-      else{
-        nextSlide();
-      }
-    }
-  });
-
   // left/right keypresses
   $('body').on('keydown', function(e) {
     if ($('.slide-section:animated').length > 0) {
@@ -125,7 +109,7 @@ $(document).ready(function(){
 
   $(function(){
     $(".live-type").typed({
-      strings: ['CREATIVE', 'RESPONSIBLE', 'AMBITIOUS', 'INDUSTRIOUS', 'GRACEFUL'],
+    strings: ['POLISHED', 'TENACIOUS', 'RESOURCEFUL', 'AMBITIOUS', 'INDUSTRIOUS' ],
       typeSpeed: 200,
       backSpeed: 50,
       backDelay: 1000,
@@ -172,7 +156,6 @@ $(document).ready(function(){
 
   // open modal for each project when clicked on
   $('.more-info-button, #giphy').on('click', function() {
-    console.log('It worked');
     var target = $(this).attr('data-target');
     $('#' + target + '-modal-content, #work-modal-overlay').show();
   });
@@ -192,11 +175,4 @@ $(document).ready(function(){
   $('#work-modal-wrapper').on('click', function(event) {
     event.stopPropagation();
   });
-
-  var actualWidth = console.log(window.innerWidth); // size of window
-  var actualHeight = console.log(window.innerHeight);
-  $(window).width(actualWidth); // size of slides
-  $(window).height(actualHeight);
-
-
 }); // END

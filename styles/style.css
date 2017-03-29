@@ -6,8 +6,8 @@
 }
 
 *,
-*:after,
-*::before {
+*::before,
+*:after {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -34,8 +34,7 @@ body .slide-section {
   top: 0;
   bottom: 0;
   left: 100%;
-  padding: 60px 30px;
-  padding-right: 70px;
+  padding: 60px 70px 60px 30px;
 }
 
 body .color-fill {
@@ -46,14 +45,16 @@ body .bold-heading {
   font-weight: 500;
 }
 
-body, a {
+a,
+body {
   color: #F0F0F0;
   text-decoration: none;
   font-family: Roboto, sans-serif;
   font-weight: 300;
 }
 
-a:active, a:focus {
+a:active,
+a:focus {
   outline: none;
 }
 
@@ -64,26 +65,21 @@ a:hover {
 
 @media screen and (max-width: 400px) {
   body .slide-section {
-    padding: 40px 15px;
-    padding-right: 40px;
+    padding: 40px 40px 40px 15px;
   }
 }
 
 .photo-slide {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/mountiain_space.jpg") no-repeat;
-  background-size: cover;
-  background-position: center;
+  background: #424242;
 }
 
 #bio {
   z-index: 40;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/tree_mountain.jpg") no-repeat;
-  background-size: cover;
-  background-position: center;
   left: 0;
   padding-right: 15px;
+  background: #565656;
 }
 
 .bio-content {
@@ -211,9 +207,7 @@ a:hover {
 }
 
 .bio-content .main-bio-text .timeline-event #home-image {
-  background-image: url("../img/mountains_light.jpg");
-  background-position: center;
-  background-size: cover;
+  background: #424242;
 }
 
 .bio-content .main-bio-text .timeline-event p {
@@ -296,16 +290,10 @@ a:hover {
 
 #work {
   z-index: 10;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/mountain_space.jpg") no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
 #contact {
   z-index: 10;
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/quad.jpg") no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
 .contact-content {
@@ -314,8 +302,7 @@ a:hover {
 
 .contact-content h1 {
   font-size: 25px;
-  margin: 0 auto;
-  margin-bottom: 15px;
+  margin: 0 auto 15px;
 }
 
 .contact-content .contact-info {
@@ -453,7 +440,7 @@ header #socialBox .social-icon:hover {
   left: 0;
   justify-content: center;
   z-index: 50;
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/mountains_light.jpg") no-repeat;
+  background: url("../img/mountains_light.jpg") no-repeat;
   background-size: cover;
   background-position: center;
   padding-right: 15px;
@@ -554,9 +541,7 @@ footer #mainNav .nav-active {
 
 #skills {
   z-index: 30;
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/mountain_stars.jpg") no-repeat;
-  background-size: cover;
-  background-position: center;
+  background: #424242;
 }
 
 #giphy:hover {
@@ -587,8 +572,7 @@ footer #mainNav .nav-active {
 
 .skills-content .skills-column-container .skills-column {
   border: 1px solid #F0F0F0;
-  padding: 10px;
-  padding-top: 0;
+  padding: 0 10px 10px;
   width: 25%;
   margin-left: 10px;
 }
@@ -651,8 +635,7 @@ footer #mainNav .nav-active {
     font-size: 28px;
   }
   .skills-content .skills-column-container .skill-column .skill-box p {
-    margin: 15px;
-    margin-left: 7px;
+    margin: 15px 15px 15px 7px;
     font-size: 20px;
   }
 }
@@ -687,10 +670,12 @@ footer #mainNav .nav-active {
     font-size: 16px;
     margin: 8px 4px;
   }
-  .skills-content .skills-column-container #skills-1, .skills-content .skills-column-container #skills-3 {
+  .skills-content .skills-column-container #skills-1,
+  .skills-content .skills-column-container #skills-3 {
     order: 1;
   }
-  .skills-content .skills-column-container #skills-2, .skills-content .skills-column-container #skills-4 {
+  .skills-content .skills-column-container #skills-2,
+  .skills-content .skills-column-container #skills-4 {
     order: 2;
   }
 }
@@ -775,6 +760,7 @@ footer #mainNav .nav-active {
   justify-content: center;
   font-size: 18px;
   font-weight: 500;
+  overflow: scroll;
 }
 
 #work .project-box-container .project-box .more-info-button {
@@ -821,6 +807,12 @@ footer #mainNav .nav-active {
   background-size: cover;
 }
 
+#work .project-box-container #calc-project-box {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/calculator.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
 #work-modal-overlay {
   position: absolute;
   left: 0;
@@ -843,7 +835,7 @@ footer #mainNav .nav-active {
 
 #work-modal-overlay #work-modal-wrapper .modal-content {
   color: #424242;
-  padding: 20px;
+  padding: 10px;
   display: none;
 }
 
@@ -861,11 +853,20 @@ footer #mainNav .nav-active {
 
 #work-modal-overlay #work-modal-wrapper .modal-content p {
   margin: 10px auto;
+  text-align: center;
 }
 
 #work-modal-overlay #work-modal-wrapper .modal-content h5 {
   margin: 5px auto;
   text-align: center;
+}
+
+#work-modal-overlay #work-modal-wrapper .modal-content .modal-pic-container {
+  text-align: center;
+}
+
+#work-modal-overlay #work-modal-wrapper .modal-content .modal-pic-container .modal-pics {
+  height: 190px;
 }
 
 #work-modal-overlay #work-modal-wrapper .modal-content .modal-tools-wrapper {
@@ -891,7 +892,7 @@ footer #mainNav .nav-active {
   color: #424242;
 }
 
-#work-modal-overlay #work-modal-wrapper .modal-content .modal-links .modal-link a i, #work-modal-overlay #work-modal-wrapper .modal-content .modal-links .modal-link a .modal-link-text {
+#work-modal-overlay #work-modal-wrapper .modal-content .modal-links .modal-link a .modal-link-text, #work-modal-overlay #work-modal-wrapper .modal-content .modal-links .modal-link a i {
   font-size: 20px;
 }
 
@@ -914,7 +915,7 @@ footer #mainNav .nav-active {
 
 @media screen and (min-width: 500px) {
   #work-modal-overlay #work-modal-wrapper {
-    width: 65%;
+    width: 90%;
   }
 }
 
@@ -923,7 +924,7 @@ footer #mainNav .nav-active {
     font-size: 47px;
   }
   #work-modal-overlay #work-modal-wrapper {
-    max-width: 600px;
+    max-width: 750px;
   }
   #work-modal-overlay #work-modal-wrapper .modal-content .modal-links {
     display: flex;
@@ -935,18 +936,19 @@ footer #mainNav .nav-active {
     flex-flow: column nowrap;
     align-items: center;
   }
-  #work-modal-overlay #work-modal-wrapper .modal-content .modal-links .modal-link a i, #work-modal-overlay #work-modal-wrapper .modal-content .modal-links .modal-link a .modal-link-text {
+  #work-modal-overlay #work-modal-wrapper .modal-content .modal-links .modal-link a .modal-link-text,
+  #work-modal-overlay #work-modal-wrapper .modal-content .modal-links .modal-link a i {
     display: block;
   }
 }
 
 @media screen and (min-width: 800px) {
   #work h2 {
-    margin-top: 7vh;
+    margin-top: 5vh;
   }
   #work .work-subheading {
     display: block;
-    margin-bottom: 3vh;
+    margin-bottom: 2vh;
   }
   #work .work-bottom-text {
     display: block;
@@ -955,8 +957,6 @@ footer #mainNav .nav-active {
     align-self: center;
     display: flex;
     flex-flow: row wrap;
-    overflow-y: hidden;
-    height: auto;
   }
   #work .project-box-container .project-box {
     height: 25vh;
@@ -976,4 +976,11 @@ footer #mainNav .nav-active {
   #work .project-box-container #energy-project-box {
     width: 25%;
   }
+  #work .project-box-container #calc-project-box {
+    width: 100%;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
 }

@@ -9,8 +9,8 @@ import path from 'path';
 import babel from 'gulp-babel';
 
 const paths = {
-  jsSource: ['./public/js/*.js'],
-  sassSource: ['./public/styles/*.scss'],
+  jsSource: ['./js/*.js'],
+  sassSource: ['./styles/*.scss'],
   paths: [ path.join(__dirname, 'styles') ]
 };
 const sassOptions = {
@@ -28,7 +28,7 @@ gulp.task('js', () =>  {
   .pipe(concat('bundle.js'))
   .pipe(annotate())
   .pipe(uglify())
-  .pipe(gulp.dest('./public'));
+  .pipe(gulp.dest('./js'));
 });
 
 
@@ -36,7 +36,7 @@ gulp.task('sass', () => {
   return gulp.src(paths.sassSource)
   .pipe(sass(sassOptions).on('error', sass.logError))
   .pipe(concat('style.css'))
-  .pipe(gulp.dest('./public/styles'));
+  .pipe(gulp.dest('./styles'));
 });
 
 gulp.task('watch', () =>  {
