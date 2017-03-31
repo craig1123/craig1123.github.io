@@ -172,6 +172,9 @@ a:hover {
             padding: $slide-tb-mobile-pad $arrow-nav-extra-pad $slide-tb-mobile-pad $slide-lr-mobile-pad;
         }
     }
+    .modal-pic-container {
+      display: none;
+    }
 }
 // Photo Slide //
 .photo-slide {
@@ -676,7 +679,7 @@ footer {
     width: 100%;
     padding: 0 $header-lr-padding;
     height: $header-height;
-    z-index: $header-z;
+    z-index: 49;
     @extend .flex-section;
     justify-content: center;
 
