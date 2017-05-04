@@ -67,7 +67,7 @@ a:hover {
   body .slide-section {
     padding: 40px 40px 40px 15px;
   }
-  body .modal-pic-container {
+  .modal-pic-container {
     display: none;
   }
 }
@@ -780,6 +780,12 @@ footer #mainNav .nav-active {
   color: #424242;
 }
 
+#work .project-box-container #hang-project-box {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/hangman-feature-graphic.png");
+  background-position: center;
+  background-size: cover;
+}
+
 #work .project-box-container #rep-project-box {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/stats.jpg");
   background-position: center;
@@ -963,6 +969,9 @@ footer #mainNav .nav-active {
   }
   #work .project-box-container .project-box {
     height: 25vh;
+  }
+  #work .project-box-container #hang-project-box {
+    width: 100%;
   }
   #work .project-box-container #rep-project-box {
     width: 66.6%;

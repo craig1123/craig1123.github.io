@@ -984,6 +984,12 @@ footer {
             }
         }
 
+        #hang-project-box {
+            background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),
+            url( '../img/hangman-feature-graphic.png');
+            background-position: center;
+            background-size: cover;
+        }
         #rep-project-box {
             background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),
             url( '../img/stats.jpg');
@@ -1171,6 +1177,9 @@ footer {
             flex-flow: row wrap;
             .project-box {
                 height: 25vh;
+            }
+            #hang-project-box {
+                width: 100%;
             }
             #rep-project-box {
                 width: 66.6%;
