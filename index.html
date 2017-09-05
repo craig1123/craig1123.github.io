@@ -16,11 +16,7 @@
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	</head>
 	<body class="landing">
-
-		<!-- Page Wrapper -->
 			<div id="page-wrapper">
-
-				<!-- Header -->
 					<header id="header" class="alt">
 						<h1><a href="index.html">Craig Walker</a></h1>
 						<ul class="icons" style='float: right; margin-right: 1em'>
@@ -163,9 +159,11 @@
 							<h2 style="padding-top: 1em; text-align: center;">Recent Projects</h2>
 						</section>
 						<section class="spotlight">
-							<a class="image grow" target='_blank' href="https://play.google.com/store/apps/details?id=com.hangman.exp">
-								<img src="images/hangman-feature-graphic.png" alt="" />
-							</a>
+							<div class="image-wrapper">
+								<a class="image" target='_blank' href="https://play.google.com/store/apps/details?id=com.hangman.exp">
+									<img src="images/hangman-feature-graphic.png" alt="" />
+								</a>
+							</div>
 							<div class="content">
 								<h2>Hangman
 									<a target="_blank" href="https://github.com/craig1123/hangman" class="icon fa-github"></a>
@@ -176,9 +174,11 @@
 							</div>
 						</section>
 						<section class="spotlight">
-							<a class="image grow" target='_blank' href="https://github.com/karams-jihads/domo-clone">
-								<img src="images/stats.jpg" alt="" />
-							</a>
+							<div class="image-wrapper">
+								<a class="image" target='_blank' href="https://github.com/karams-jihads/domo-clone">
+									<img src="images/stats.jpg" alt="" />
+								</a>
+							</div>
 							<div class="content">
 								<h2>Kromo
 									<a target="_blank" href="https://github.com/karams-jihads/domo-clone" class="icon fa-github"></a>
@@ -189,9 +189,11 @@
 							</div>
 						</section>
 						<section class="spotlight">
-							<a class="image grow" target='_blank' href="https://craig1123.github.io/Pokedex/">
-								<img src="images/pokedex.jpg" alt="" />
-							</a>
+							<div class="image-wrapper">
+								<a class="image" target='_blank' href="https://craig1123.github.io/Pokedex/">
+									<img src="images/pokedex.jpg" alt="" />
+								</a>
+							</div>
 							<div class="content">
 								<h2>Pokedex
 									<a target="_blank" href="https://github.com/craig1123/Pokedex" class="icon fa-github"></a>
@@ -202,9 +204,11 @@
 							</div>
 						</section>
 						<section class="spotlight">
-							<a class="image grow" target='_blank' href="https://github.com/craig1123/mIdea">
-								<img src="images/light-bulb.jpg" alt="" />
-							</a>
+							<div class="image-wrapper">
+								<a class="image" target='_blank' href="https://github.com/craig1123/mIdea">
+									<img src="images/light-bulb.jpg" alt="" />
+								</a>
+							</div>
 							<div class="content">
 								<h2>Mydea
 									<a target="_blank" href="https://github.com/craig1123/mIdea" class="icon fa-github"></a>
@@ -215,9 +219,11 @@
 							</div>
 						</section>
 						<section class="spotlight">
-							<a class="image grow" target='_blank' href="http://craigswalker.com/ReactCalculator/">
-								<img src="images/calculator.jpg" alt="" />
-							</a>
+							<div class="image-wrapper">
+								<a class="image" target='_blank' href="http://craigswalker.com/ReactCalculator/">
+									<img src="images/calculator.jpg" alt="" />
+								</a>
+							</div>
 							<div class="content">
 								<h2>iOS Calculator
 									<a target="_blank" href="https://github.com/craig1123/ReactCalculator" class="icon fa-github"></a>
@@ -228,9 +234,11 @@
 							</div>
 						</section>
 						<section class="spotlight">
-							<a class="image grow" target='_blank' href="https://craig1123.github.io/itunes/">
-								<img src="images/music.png" alt="" />
-							</a>
+							<div class="image-wrapper">
+								<a class="image" target='_blank' href="https://craig1123.github.io/itunes/">
+									<img src="images/music.png" alt="" />
+								</a>
+							</div>
 							<div class="content">
 								<h2>CraigTunes
 									<a target="_blank" href="https://github.com/craig1123/itunes" class="icon fa-github"></a>
@@ -241,9 +249,11 @@
 							</div>
 						</section>
 						<section class="spotlight">
-							<a class="image grow" target='_blank' href="https://cdn.rawgit.com/craig1123/jQuerySnake/master/index.html">
-								<img src="images/snake.jpg" alt="" />
-							</a>
+							<div class="image-wrapper">
+								<a class="image" target='_blank' href="https://cdn.rawgit.com/craig1123/jQuerySnake/master/index.html">
+									<img src="images/snake.jpg" alt="" />
+								</a>
+							</div>
 							<div class="content">
 								<h2>Snake
 									<a target="_blank" href="https://github.com/craig1123/jQuerySnake" class="icon fa-github"></a>
@@ -329,6 +339,31 @@
 			</div>
 
 		<!-- Scripts -->
+			<script type="text/javascript">
+				var lazyImgs = [].slice.call(document.querySelectorAll('.lazy-load'));
+				if ('IntersectionObserver' in window) {
+					var config = {
+						rootMargin: '50px 0px',
+						threshold: 0.01,
+					};
+					var onChange = function(changes) {
+						changes.forEach(function(change) {
+							if (change.intersectionRatio > 0) {
+								change.target.src = change.target.dataset.src;
+								observer.unobserve(change.target);
+							}
+						});
+					};
+					var observer = new IntersectionObserver(onChange, config);
+					lazyImgs.forEach(function(img) {
+						observer.observe(img)
+					});
+				} else {
+					lazyImgs.forEach(function(image) {
+						image.src = image.dataset.src;
+					});
+				}
+			</script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
@@ -336,6 +371,96 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+			<script>
+			  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
+			  ga('create', 'UA-68311616-2', 'auto');
+			  ga('send', 'pageview');
+
+			</script>
+			<script type="text/javascript">
+				var isLocalhost = Boolean(
+					window.location.hostname === 'localhost' ||
+					window.location.hostname === '[::1]' ||
+					window.location.hostname.match(
+						/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/
+					) // 127.0.0.1/8 is considered localhost for IPv4.
+				);
+
+				function register() {
+					if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
+						var publicUrl = new URL(process.env.PUBLIC_URL, window.location);
+						if (publicUrl.origin !== window.location.origin) {
+							return;
+						}
+
+						window.addEventListener('load', function() {
+							var swUrl = process.env.PUBLIC_URL + '/service-worker.js';
+							if (!isLocalhost) {
+								registerValidSW(swUrl);
+							} else {
+								checkValidServiceWorker(swUrl);
+							}
+						});
+					}
+				}
+
+				function registerValidSW(swUrl) {
+					navigator.serviceWorker
+						.register(swUrl)
+						.then(function(reg) {
+							var registration = reg;
+							registration.onupdatefound = function() {
+								var installingWorker = registration.installing;
+								installingWorker.onstatechange = function() {
+									if (installingWorker.state === 'installed') {
+										if (navigator.serviceWorker.controller) {
+											console.log('New content is available; please refresh.');
+										} else {
+											console.log('Content is cached for offline use.');
+										}
+									}
+								};
+							};
+						})
+						.catch(function(error) {
+							console.error('Error during service worker registration:', error);
+						});
+				}
+
+				function checkValidServiceWorker(swUrl) {
+					fetch(swUrl)
+						.then(function(response) {
+							if (
+								response.status === 404 ||
+								response.headers.get('content-type').indexOf('javascript') === -1
+							) {
+								navigator.serviceWorker.ready.then(function(registration) {
+									registration.unregister().then(function() {
+										window.location.reload();
+									});
+								});
+							} else {
+								registerValidSW(swUrl);
+							}
+						})
+						.catch(function() {
+							console.log(
+								'No internet connection found. App is running in offline mode.'
+							);
+						});
+				}
+
+				function unregister() {
+					if ('serviceWorker' in navigator) {
+						navigator.serviceWorker.ready.then(function(registration) {
+							registration.unregister();
+						});
+					}
+				}
+			</script>
 	</body>
 </html>
