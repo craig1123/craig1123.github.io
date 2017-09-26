@@ -2571,12 +2571,20 @@
 		.spotlight:nth-child(10) {
 			background-color: rgba(0, 0, 0, 0.75);
 		}
+		.spotlight:nth-child(11) {
+			background-color: rgba(0, 0, 0, 0.825);
+		}
+		.spotlight:nth-child(12) {
+			background-color: rgba(0, 0, 0, 0.9);
+		}
+		.spotlight:nth-child(13) {
+			background-color: rgba(0, 0, 0, 0.975);
+		}
 		.blocker {
 			position:absolute;
 			height:100%;
 			width:100%;
 			z-index:1;
-			/*background:rgba(255,0,0,0.5);*/
 		}
 
 		@media screen and (max-width: 1280px) {
@@ -2801,7 +2809,7 @@
 			}
 
 		.wrapper.style2 {
-			background-color: #c56943;
+			background-color: #5bc5e3;
 		}
 
 		.wrapper.style3 {

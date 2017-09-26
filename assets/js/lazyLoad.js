@@ -1,7 +1,7 @@
 var lazyImgs = [].slice.call(document.querySelectorAll('.lazy-load'));
 if ('IntersectionObserver' in window) {
     var config = {
-        rootMargin: '50px 0px',
+        rootMargin: '100px 0px',
         threshold: 0.01,
     };
     var onChange = function(changes) {
