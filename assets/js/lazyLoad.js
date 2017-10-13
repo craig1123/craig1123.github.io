@@ -21,3 +21,10 @@ if ('IntersectionObserver' in window) {
         image.src = image.dataset.src;
     });
 }
+
+var resource = document.createElement('link');
+resource.setAttribute("rel", "stylesheet");
+resource.setAttribute("href","https://cdn.rawgit.com/konpa/devicon/4f6a4b08efdad6bb29f9cc801f5c07e263b39907/devicon.min.css");
+resource.setAttribute("type","text/css");
+var head = document.getElementsByTagName('head')[0];
+head.appendChild(resource);
