@@ -74,6 +74,9 @@ a {
 	color: inherit;
 	text-decoration: none;
 }
+a:hover {
+	color: #9be8ff;
+}
 p {
 	margin: 0 0 2em 0;
 }
@@ -909,11 +912,11 @@ body.is-menu-visible #page-wrapper:before {
 	bottom: 4em;
 	content: '';
 	display: block;
-	height: 1.5em;
+	height: 2.5em;
 	left: 50%;
 	margin: 0 0 0 -0.75em;
 	position: absolute;
-	width: 1.5em;
+	width: 2.5em;
 }
 #banner:after {
 	-moz-pointer-events: none;
