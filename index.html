@@ -13,16 +13,93 @@
 		<title>Craig Walker | Web Developer | Front End Developer | App Developer</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="description" content="Craig Walker's web developer portfolio.">
+		<meta name="description" content="Craig Walker's web developer, app developer, and front end development portfolio.">
 		<meta name="keywords" content="web developer, javascript, craig, craig walker, Craig Walker, Craig S Walker, html, web design, web apps, css" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon"/>
+		<style>
+			html, body {
+				margin: 0;
+				padding: 0;
+				border: 0;
+				font-size: 100%;
+				font: inherit;
+				vertical-align: baseline;
+			}
+			footer, header { display: block; }
+			body { line-height: 1; }
+			ul { list-style: none; }
+			body { -webkit-text-size-adjust: none; }
+			*, *:before, *:after {
+				-moz-box-sizing: border-box;
+				-webkit-box-sizing: border-box;
+				box-sizing: border-box;
+			}
+			@-ms-viewport { width: device-width; }
+			body { background: #2e3842; }
+			body.is-loading *, body.is-loading *:before, body.is-loading *:after {
+				-moz-animation: none !important;
+				-webkit-animation: none !important;
+				-ms-animation: none !important;
+				animation: none !important;
+				-moz-transition: none !important;
+				-webkit-transition: none !important;
+				-ms-transition: none !important;
+				transition: none !important;
+			}
+			body {
+				color: #fff;
+				font-family: "Open Sans", Helvetica, sans-serif;
+				font-size: 15pt;
+				font-weight: 400;
+				letter-spacing: 0.075em;
+				line-height: 1.65em;
+			}
+			@media screen and (max-width: 1680px) { body { font-size: 13pt; } }
+			@media screen and (max-width: 1280px) { body { font-size: 12pt; }}
+			@media screen and (max-width: 736px) { body { font-size: 11pt; letter-spacing: 0.0375em; } }
+			a { color: inherit; text-decoration: none; }
+			a:hover { color: #9be8ff; }
+			p { margin: 0 0 2em 0; }
+			h1, h2 {
+				color: #fff;
+				font-weight: 800;
+				letter-spacing: 0.225em;
+				line-height: 1em;
+				margin: 0 0 1em 0;
+				text-transform: uppercase;
+			}
+			h1 a, h2 a { color: inherit; text-decoration: none; }
+			h2 { font-size: 1.35em; line-height: 1.75em; }
+			@media screen and (max-width: 736px) {
+				h2 { font-size: 1.1em; line-height: 1.65em; }
+			}
+			sup {
+				font-size: 0.8em;
+				position: relative;
+				top: -0.5em;
+			}
+			section.special { text-align: center; }
+			header p {
+				color: rgba(255, 255, 255, 0.5);
+				position: relative;
+				top: -0.25em;
+			}
+			@media screen and (max-width: 980px) {
+				header br { display: none; }
+			}
+		</style>
 	</head>
 	<body class="landing">
 			<div id="page-wrapper">
 					<header id="header" class="alt">
 						<h1><a href="index.html">Craig Walker</a></h1>
 						<ul class="icons" style='float: right; margin-right: 1em'>
+							<li>
+								<a href="http://craigwalker.org/" class="icon fa fa-rss-square">
+									<span class="label">blog</span>
+								</a>
+							</li>
 							<li>
 								<a href="https://www.linkedin.com/in/craig-walker" class="icon fa-linkedin">
 									<span class="label">linkedIn</span>
@@ -196,8 +273,7 @@
 						<section class="spotlight">
 							<div class="image-wrapper">
 								<a class="image" href="https://craig1123.github.io/hannahjs/">
-									<div class="blocker"></div>
-									<iframe data-src="https://craig1123.github.io/hannahjs/" class="lazy-load" height="300px" width="100%" ></iframe>
+									<img class="lazy-load" data-src="images/hannahjs.png" alt="hannahjs" width="400px" height="300px"/>
 								</a>
 							</div>
 							<div class="content">
@@ -230,8 +306,7 @@
 						<section class="spotlight">
 							<div class="image-wrapper">
 								<a class="image" href="https://craig1123.github.io/Pokedex/">
-									<div class="blocker"></div>
-									<iframe data-src="https://craig1123.github.io/Pokedex/" class="lazy-load" height="300px" width="100%" ></iframe>
+									<img class="lazy-load" data-src="images/pokedex.png" alt="pokedex" width="400px" height="300px"/>
 								</a>
 							</div>
 							<div class="content">
@@ -265,7 +340,8 @@
 							<div class="image-wrapper">
 								<a class="image" href="https://craig1123.github.io/itunes/">
 									<div class="blocker"></div>
-									<iframe data-src="https://craig1123.github.io/itunes/" class="lazy-load" height="300px" width="100%" ></iframe>								</a>
+									<iframe data-src="https://craig1123.github.io/itunes/" class="lazy-load" height="300px" width="100%" ></iframe>
+								</a>
 							</div>
 							<div class="content">
 								<h2>
@@ -281,7 +357,7 @@
 							<div class="image-wrapper">
 								<a class="image" href="https://craig1123.github.io/snake/">
 									<div class="blocker"></div>
-									<iframe data-src="https://craig1123.github.io/snake/" class="lazy-load" height="300px" width="100%" ></iframe>
+									<iframe data-src="https://craig1123.github.io/snake/" class="lazy-load" height="300px" width="100%"></iframe>
 								</a>
 							</div>
 							<div class="content">
