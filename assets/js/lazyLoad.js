@@ -22,9 +22,15 @@ if ('IntersectionObserver' in window) {
     });
 }
 
-var resource = document.createElement('link');
-resource.setAttribute("rel", "stylesheet");
-resource.setAttribute("href","https://cdn.rawgit.com/konpa/devicon/4f6a4b08efdad6bb29f9cc801f5c07e263b39907/devicon.min.css");
-resource.setAttribute("type","text/css");
 var head = document.getElementsByTagName('head')[0];
-head.appendChild(resource);
+var devicon = document.createElement('link');
+var fontAwesome = document.createElement('link');
+devicon.setAttribute("rel", "stylesheet");
+devicon.setAttribute("href","https://cdn.rawgit.com/konpa/devicon/4f6a4b08efdad6bb29f9cc801f5c07e263b39907/devicon.min.css");
+devicon.setAttribute("type","text/css");
+fontAwesome.setAttribute("rel", "stylesheet");
+fontAwesome.setAttribute("href","./assets/css/font-awesome.min.css");
+fontAwesome.setAttribute("type","text/css");
+head.appendChild(fontAwesome);
+head.appendChild(devicon);
+
