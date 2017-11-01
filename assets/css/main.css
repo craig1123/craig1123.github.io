@@ -1,6 +1,3 @@
-@import url(font-awesome.min.css);
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic");
-
 .icon {
 	text-decoration: none;
 	border-bottom: none;
@@ -27,7 +24,7 @@
 .image {
 	border-radius: 3px;
 	border: 0;
-	display: inline-block;
+	display: flex;
 	position: relative;
 	width: 100%;
 }
@@ -207,6 +204,7 @@ ul.icons li:last-child {
 .spotlight {
 	align-items: center;
 	display: flex;
+	padding: 10px;
 }
 .spotlight .image-wrapper {
 	order: 1;
@@ -214,6 +212,7 @@ ul.icons li:last-child {
 	position: relative;
 	overflow: hidden;
 	width: 35%;
+	box-shadow: 15px 15px 20px 0px rgba(0,0,0,0.39);
 }
 .spotlight .image-wrapper .image {
 	transform: scale(1.004, 1.0004);
@@ -224,7 +223,6 @@ ul.icons li:last-child {
 	transform: scale(1.07, 1.07);
 }
 .spotlight .image-wrapper .image img {
-	border-radius: 0;
 	position: relative;
 }
 .spotlight .content {
@@ -293,6 +291,9 @@ ul.icons li:last-child {
 	}
 }
 @media screen and (max-width: 736px) {
+	.spotlight {
+		padding: 25px;
+	}
 	.spotlight .content {
 		padding: 3em 2em 1em 2em ;
 		max-width: none;
@@ -307,6 +308,11 @@ ul.icons li:last-child {
 	}
 	.spotlight br {
 		display: none;
+	}
+}
+@media screen and (max-width: 980px) {
+	.spotlight .image-wrapper {
+    width: 100%;
 	}
 }
 
@@ -421,6 +427,11 @@ body.is-menu-visible #page-wrapper:before {
 		font-size: 0.8em;
 	}
 }
+@media screen and (max-width: 481px) {
+	#header h1 a {
+		font-size: 0.5em;
+	}
+}
 #header.alt {
 	background: transparent;
 }
@@ -498,7 +509,7 @@ body.is-menu-visible #page-wrapper:before {
 	cursor: pointer;
 }
 #banner .more:after {
-	background-image: url("images/arrow.svg");
+	background-image: url("./images/arrow.svg");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -628,10 +639,10 @@ body.is-loading #banner:after {
 }
 
 body.landing #page-wrapper {
-	background-image: -moz-linear-gradient(top, rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url("../../images/sunset-reflect.jpg");
-	background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url("../../images/sunset-reflect.jpg");
-	background-image: -ms-linear-gradient(top, rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url("../../images/sunset-reflect.jpg");
-	background-image: linear-gradient(top, rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url("../../images/sunset-reflect.jpg");
+	background-image: -moz-linear-gradient(top, rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url("./images/sunset-reflect.jpg");
+	background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url("./images/sunset-reflect.jpg");
+	background-image: -ms-linear-gradient(top, rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url("./images/sunset-reflect.jpg");
+	background-image: linear-gradient(top, rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url("./images/sunset-reflect.jpg");
 	background-attachment: fixed;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -646,10 +657,10 @@ body.is-mobile.landing #page-wrapper {
 }
 body.is-mobile.landing #banner,
 body.is-mobile.landing .wrapper.style4 {
-	background-image: -moz-linear-gradient(top, rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url("../../images/sunset-reflect.jpg");
-	background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url("../../images/sunset-reflect.jpg");
-	background-image: -ms-linear-gradient(top, rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url("../../images/sunset-reflect.jpg");
-	background-image: linear-gradient(top, rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url("../../images/sunset-reflect.jpg");
+	background-image: -moz-linear-gradient(top, rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url("./images/sunset-reflect.jpg");
+	background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url("./images/sunset-reflect.jpg");
+	background-image: -ms-linear-gradient(top, rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url("./images/sunset-reflect.jpg");
+	background-image: linear-gradient(top, rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url("./images/sunset-reflect.jpg");
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -690,13 +701,11 @@ body.is-mobile.landing #footer {
   align-items: center;
 }
 .bio-photo {
-  width: 30vh;
-  min-width: 128px;
-  max-width: 200px;
-  height: 30vh;
+	max-width: 250px;
 	margin-right: 5px;
-	margin-left: 3em;
-  border-radius: 50%;
+	margin-left: 1em;
+	border-radius: 3px;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 .heading-text-wrapper {
   margin-left: 10px;
@@ -752,7 +761,7 @@ body.is-mobile.landing #footer {
   top: -11px;
 }
 .timeline-event {
-  color: gray;
+  color: #51626b;
   display: none;
   z-index: 40;
 }
