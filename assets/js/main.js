@@ -79,20 +79,6 @@
 				timelineCircle[i].addEventListener('click', clickIcon);
 		}
 
-		var throttle = function(func, limit) {
-			var inThrottle = undefined;
-				return function() {
-						var args = arguments;
-						var context = this;
-						if (!inThrottle) {
-								func.apply(context, args);
-								inThrottle = true;
-								return setTimeout(function() {
-										return inThrottle = false;
-								}, limit);
-						}
-				};
-		};
 		var mobile = window.innerWidth < 980;
 		var body = document.body;
 		var header = document.getElementById('header');
