@@ -36,7 +36,7 @@
 		head.appendChild(devicon);
 
 		function getElementY(query) {
-				return window.pageYOffset + document.querySelector(query).getBoundingClientRect().top
+			return window.pageYOffset + document.querySelector(query).getBoundingClientRect().top
 		}
 		function doScrolling(element, duration) {
 				var startingY = window.pageYOffset;
@@ -52,7 +52,7 @@
 						window.scrollTo(0, startingY + diff * percent);
 
 						if (time < duration) {
-								window.requestAnimationFrame(step)
+							window.requestAnimationFrame(step)
 						}
 				})
 		}
@@ -60,18 +60,18 @@
 		var clickIcon = function(e) {
 				var el = e.currentTarget;
 				if (!el.classList.contains('.current-square')) {
-						var currentSquare = document.getElementsByClassName('current-square')[0];
-						var activeEvent = document.getElementsByClassName('active-event')[0];
-						var mainBioText = document.getElementsByClassName('main-bio-text')[0];
-						var target = el.getAttribute('data-target');
-						var targetId = document.getElementById(target);
+					var currentSquare = document.getElementsByClassName('current-square')[0];
+					var activeEvent = document.getElementsByClassName('active-event')[0];
+					var mainBioText = document.getElementsByClassName('main-bio-text')[0];
+					var target = el.getAttribute('data-target');
+					var targetId = document.getElementById(target);
 
-						currentSquare.classList.remove('current-square');
-						activeEvent.classList.remove('active-event');
-						activeEvent.style.display = 'none';
-						el.classList.add('current-square');
-						targetId.classList.add('active-event');
-						targetId.style.display = 'block';
+					currentSquare.classList.remove('current-square');
+					activeEvent.classList.remove('active-event');
+					activeEvent.style.display = 'none';
+					el.classList.add('current-square');
+					targetId.classList.add('active-event');
+					targetId.style.display = 'block';
 				}
 		}
 		var timelineCircle = document.getElementsByClassName('timeline-circle');
