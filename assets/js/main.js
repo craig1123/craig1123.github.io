@@ -1,4 +1,5 @@
 (function() {
+		// lazy load
 		var lazyImgs = [].slice.call(document.querySelectorAll('.lazy-load'));
 		if ('IntersectionObserver' in window) {
 		    var config = {
@@ -23,6 +24,7 @@
 		    });
 		}
 
+		// lazy insert css
 		var head = document.getElementsByTagName('head')[0];
 		var devicon = document.createElement('link');
 		var fontAwesome = document.createElement('link');
@@ -35,6 +37,7 @@
 		head.appendChild(fontAwesome);
 		head.appendChild(devicon);
 
+		// scrolling header
 		function getElementY(query) {
 			return window.pageYOffset + document.querySelector(query).getBoundingClientRect().top
 		}
@@ -57,6 +60,8 @@
 				})
 		}
 		document.getElementById('scrolly').addEventListener('click', doScrolling.bind(null, '#bio', 1000));
+
+		// clicking on history
 		var clickIcon = function(e) {
 				var el = e.currentTarget;
 				if (!el.classList.contains('.current-square')) {
@@ -79,6 +84,7 @@
 				timelineCircle[i].addEventListener('click', clickIcon);
 		}
 
+		// loading initial banner
 		var mobile = window.innerWidth < 980;
 		var body = document.body;
 		var header = document.getElementById('header');
