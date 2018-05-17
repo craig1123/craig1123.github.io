@@ -32,8 +32,8 @@
 		devicon.setAttribute("href","https://cdn.rawgit.com/konpa/devicon/4f6a4b08efdad6bb29f9cc801f5c07e263b39907/devicon.min.css");
 		devicon.setAttribute("type","text/css");
 		fontAwesome.setAttribute("rel", "stylesheet");
-		fontAwesome.setAttribute("href","./assets/css/font-awesome.min.css");
-		fontAwesome.setAttribute("type","text/css");
+		fontAwesome.setAttribute("href", "./public/css/font-awesome.min.css");
+		fontAwesome.setAttribute("type", "text/css");
 		head.appendChild(fontAwesome);
 		head.appendChild(devicon);
 
@@ -63,21 +63,21 @@
 
 		// clicking on history
 		var clickIcon = function(e) {
-				var el = e.currentTarget;
-				if (!el.classList.contains('.current-square')) {
-					var currentSquare = document.getElementsByClassName('current-square')[0];
-					var activeEvent = document.getElementsByClassName('active-event')[0];
-					var mainBioText = document.getElementsByClassName('main-bio-text')[0];
-					var target = el.getAttribute('data-target');
-					var targetId = document.getElementById(target);
+			var el = e.currentTarget;
+			if (!el.classList.contains('.current-square')) {
+				var currentSquare = document.getElementsByClassName('current-square')[0];
+				var activeEvent = document.getElementsByClassName('active-event')[0];
+				var mainBioText = document.getElementsByClassName('main-bio-text')[0];
+				var target = el.getAttribute('data-target');
+				var targetId = document.getElementById(target);
 
-					currentSquare.classList.remove('current-square');
-					activeEvent.classList.remove('active-event');
-					activeEvent.style.display = 'none';
-					el.classList.add('current-square');
-					targetId.classList.add('active-event');
-					targetId.style.display = 'block';
-				}
+				currentSquare.classList.remove('current-square');
+				activeEvent.classList.remove('active-event');
+				activeEvent.style.display = 'none';
+				el.classList.add('current-square');
+				targetId.classList.add('active-event');
+				targetId.style.display = 'block';
+			}
 		}
 		var timelineCircle = document.getElementsByClassName('timeline-circle');
 		for (var i = 0; i < timelineCircle.length; i += 1) {

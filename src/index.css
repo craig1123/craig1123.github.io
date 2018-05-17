@@ -1,4 +1,4 @@
-html,body{
+html, body{
 	margin:0;
 	padding:0;
 	border:0;
@@ -577,7 +577,7 @@ body.is-menu-visible #page-wrapper:before {
 	cursor: pointer;
 }
 #banner .more:after {
-	background-image: url("./images/arrow.svg");
+	background-image: url("./../images/arrow.svg");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -706,10 +706,9 @@ body.is-loading #banner:after {
 }
 
 body.landing #page-wrapper {
-	background-image: -moz-linear-gradient(top, rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url("./images/sunset-reflect.jpg");
-	background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url("./images/sunset-reflect.jpg");
-	background-image: -ms-linear-gradient(top, rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url("./images/sunset-reflect.jpg");
-	background-image: linear-gradient(top, rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url("./images/sunset-reflect.jpg");
+	background-image: -moz-linear-gradient(top, rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url("./../images/sunset-reflect.jpg");
+	background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url("./../images/sunset-reflect.jpg");
+	background-image: linear-gradient(top, rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url("./../images/sunset-reflect.jpg");
 	background-attachment: fixed;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -724,10 +723,9 @@ body.is-mobile.landing #page-wrapper {
 }
 body.is-mobile.landing #banner,
 body.is-mobile.landing .wrapper.style4 {
-	background-image: -moz-linear-gradient(top, rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url("./images/sunset-reflect.jpg");
-	background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url("./images/sunset-reflect.jpg");
-	background-image: -ms-linear-gradient(top, rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url("./images/sunset-reflect.jpg");
-	background-image: linear-gradient(top, rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url("./images/sunset-reflect.jpg");
+	background-image: -moz-linear-gradient(top, rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url("./../images/sunset-reflect.jpg");
+	background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url("./../images/sunset-reflect.jpg");
+	background-image: linear-gradient(top, rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url("./../images/sunset-reflect.jpg");
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
