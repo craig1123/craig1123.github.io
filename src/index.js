@@ -61,29 +61,6 @@
 		}
 		document.getElementById('scrolly').addEventListener('click', doScrolling.bind(null, '#bio', 1000));
 
-		// clicking on history
-		var clickIcon = function(e) {
-			var el = e.currentTarget;
-			if (!el.classList.contains('.current-square')) {
-				var currentSquare = document.getElementsByClassName('current-square')[0];
-				var activeEvent = document.getElementsByClassName('active-event')[0];
-				var mainBioText = document.getElementsByClassName('main-bio-text')[0];
-				var target = el.getAttribute('data-target');
-				var targetId = document.getElementById(target);
-
-				currentSquare.classList.remove('current-square');
-				activeEvent.classList.remove('active-event');
-				activeEvent.style.display = 'none';
-				el.classList.add('current-square');
-				targetId.classList.add('active-event');
-				targetId.style.display = 'block';
-			}
-		}
-		var timelineCircle = document.getElementsByClassName('timeline-circle');
-		for (var i = 0; i < timelineCircle.length; i += 1) {
-				timelineCircle[i].addEventListener('click', clickIcon);
-		}
-
 		// loading initial banner
 		var mobile = window.innerWidth < 980;
 		var body = document.body;
@@ -98,6 +75,10 @@
 		},false);
 
 		if (mobile) body.classList.add('is-mobile');
+
+		// add in year
+		var year = new Date().getFullYear();
+		document.getElementById('year').innerText = year;
 
 		function isScrolledIntoView(el) {
 				var sizes = el.getBoundingClientRect();
