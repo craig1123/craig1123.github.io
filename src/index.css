@@ -121,7 +121,7 @@ header p {
 .icon::before {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: FontAwesome Arial, Helvetica, sans-serif;
+  font-family: FontAwesome;
   font-style: normal;
   font-weight: normal;
   text-transform: none !important;
@@ -181,7 +181,7 @@ ul.icons {
 }
 
 #mobile-apps .phone-container {
-  background: url('../images/mobile-screen.png') no-repeat center right / auto 100%;
+  /* background: url('../images/mobile-screen.png') no-repeat center right / auto 100%; */
 }
 
 .features {
@@ -682,7 +682,6 @@ body.is-menu-visible #page-wrapper::before {
 }
 
 #banner .more::after {
-  /* background-image: url("./../images/arrow.svg"); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
