@@ -29,7 +29,7 @@
 		var devicon = document.createElement('link');
 		var fontAwesome = document.createElement('link');
 		devicon.setAttribute("rel", "stylesheet");
-		devicon.setAttribute("href","https://cdn.rawgit.com/konpa/devicon/4f6a4b08efdad6bb29f9cc801f5c07e263b39907/devicon.min.css");
+		devicon.setAttribute("href","https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css");
 		devicon.setAttribute("type","text/css");
 		fontAwesome.setAttribute("rel", "stylesheet");
 		fontAwesome.setAttribute("href", "./public/css/font-awesome.min.css");
@@ -59,7 +59,7 @@
 						}
 				})
 		}
-		document.getElementById('scrolly').addEventListener('click', doScrolling.bind(null, '#bio', 1000));
+		document.getElementById('scrolly').addEventListener('click', doScrolling.bind(null, '#mobile-apps', 1000));
 
 		// loading initial banner
 		var mobile = window.innerWidth < 980;

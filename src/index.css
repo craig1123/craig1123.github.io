@@ -153,35 +153,14 @@ header p {
   width: 100%;
 }
 
-.image.left {
-  float: left;
-  margin: 0 2em 2em 0;
-  top: 0.25em;
-}
-
 .image.right {
   float: right;
   margin: 0 0 2em 2em;
+  max-width: 40%;
   top: 0.25em;
 }
 
-.image.left,
-.image.right {
-  max-width: 40%;
-}
-
-.image.left img,
 .image.right img {
-  width: 100%;
-}
-
-.image.fit {
-  display: block;
-  margin: 0 0 2em 0;
-  width: 100%;
-}
-
-.image.fit img {
   width: 100%;
 }
 
@@ -195,9 +174,15 @@ ul.icons {
   padding-left: 0;
 }
 
-/* #mobile-apps {
+#mobile-apps {
+  background: rgb(56, 69, 82);
+  background: linear-gradient(90deg, rgba(56, 69, 82, 1) 0%, rgba(13, 16, 19, 1) 100%);
+  color: #fff;
+}
 
-} */
+#mobile-apps .phone-container {
+  background: url('../images/mobile-screen.png') no-repeat center right / auto 100%;
+}
 
 .features {
   display: flex;
@@ -691,8 +676,13 @@ body.is-menu-visible #page-wrapper::before {
   cursor: pointer;
 }
 
+#banner line {
+  stroke: #fff;
+  stroke-width: 3;
+}
+
 #banner .more::after {
-  background-image: url("./../images/arrow.svg");
+  /* background-image: url("./../images/arrow.svg"); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;

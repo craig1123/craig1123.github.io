@@ -1,0 +1,57 @@
+{
+  "short_name": "Craig Walker",
+  "name": "Craig Walker | Front End Engineer | App Developer ",
+  "icons": [
+    {
+      "src": "public/favicon/favicon.ico",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#fff",
+  "background_color": "#2e3842",
+  "related_applications": [
+    {
+      "platform": "itunes",
+      "url": "https://itunes.apple.com/us/app/memorize-by-heart-learn-texts/id1436935583"
+    },
+    {
+      "platform": "itunes",
+      "url": "https://itunes.apple.com/us/app/hangman/id1278680007"
+    },
+    {
+      "platform": "itunes",
+      "url": "https://itunes.apple.com/us/app/mastermind-break-the-code/id1435716874"
+    },
+    {
+      "platform": "itunes",
+      "url": "https://itunes.apple.com/us/app/picture-sliding-block-puzzle/id1367738676"
+    },
+    {
+      "platform": "itunes",
+      "url": "https://itunes.apple.com/us/app/emoji-charades/id1278034351"
+    },
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.memorize_by_heart"
+    },
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.goodturn.pictureslidingpuzzle"
+    },
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.hangman.exp"
+    },
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.goodturn.emojicharadesfree"
+    },
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.craig.mastermind"
+    }
+  ]
+}
