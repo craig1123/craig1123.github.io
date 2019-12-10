@@ -679,6 +679,10 @@ ul.icons li:last-child {
   .spotlight br {
     display: none;
   }
+
+  .emoji-image {
+    font-size: 125px;
+  }
 }
 
 @media screen and (max-width: 980px) {
@@ -750,6 +754,12 @@ ul.icons li:last-child {
 @media screen and (max-width: 736px) {
   .wrapper {
     padding: 3em 2em 1em 2em;
+  }
+}
+
+@media screen and (max-width: 481px) {
+  .wrapper {
+    padding: 0em;
   }
 }
 
