@@ -126,6 +126,7 @@
   gallerySlide.owlCarousel({
     loop: true,
     margin: 0,
+    lazyLoad: true,
     responsiveClass: true,
     nav: false,
     items: 5,

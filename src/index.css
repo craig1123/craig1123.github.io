@@ -428,6 +428,17 @@ ul.icons {
   font-size: 2em;
 }
 
+@media screen and (max-width: 600px) {
+  .gallery-slide .owl-stage-outer {
+    background: url("./../images/mobile-screen.png") no-repeat center / auto
+      100%;
+  }
+
+  .gallery-slide .item {
+    margin: 65px 45px 76px 45px;
+  }
+}
+
 .features {
   display: flex;
   flex-wrap: wrap;
@@ -604,12 +615,13 @@ ul.icons li:last-child {
 }
 
 .emoji-image {
-  font-size: 175px;
+  font-size: 200px;
   margin: 80px;
 }
 
 .emoji-image p {
   margin: 0px;
+  text-align: center;
 }
 
 .spotlight .content {
@@ -960,13 +972,13 @@ body.is-loading #banner::after {
   opacity: 1;
 }
 
-#cta .inner {
+.cta .inner {
   display: flex;
   max-width: 45em;
 }
 
 @media screen and (max-width: 980px) {
-  #cta .inner {
+  .cta .inner {
     display: block;
     text-align: center;
   }
