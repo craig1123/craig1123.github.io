@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: craig1123.github.io
+Token: e551554057e752a4475f914c8661f3befce34004020a10f3bd80bfd3fbb54a23
