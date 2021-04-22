@@ -1,13 +1,13 @@
-(function() {
+(function () {
   // lazy load
   var lazyImgs = [].slice.call(document.querySelectorAll(".lazy-load"));
   if ("IntersectionObserver" in window) {
     var config = {
       rootMargin: "100px 0px",
-      threshold: 0.01
+      threshold: 0.01,
     };
-    var onChange = function(changes) {
-      changes.forEach(function(change) {
+    var onChange = function (changes) {
+      changes.forEach(function (change) {
         if (change.intersectionRatio > 0) {
           change.target.src = change.target.dataset.src;
           observer.unobserve(change.target);
@@ -15,11 +15,11 @@
       });
     };
     var observer = new IntersectionObserver(onChange, config);
-    lazyImgs.forEach(function(img) {
+    lazyImgs.forEach(function (img) {
       observer.observe(img);
     });
   } else {
-    lazyImgs.forEach(function(image) {
+    lazyImgs.forEach(function (image) {
       image.src = image.dataset.src;
     });
   }
@@ -69,11 +69,10 @@
   var header = document.getElementById("header");
   var banner = document.getElementById("banner");
 
-  body.classList.add("is-loading");
   window.addEventListener(
     "load",
-    function() {
-      window.setTimeout(function() {
+    function () {
+      window.setTimeout(function () {
         body.classList.remove("is-loading");
       }, 0);
     },
@@ -92,10 +91,10 @@
   }
   function debounce(func, wait, immediate) {
     var timeout;
-    return function() {
+    return function () {
       var context = this,
         args = arguments;
-      var later = function() {
+      var later = function () {
         timeout = null;
         if (!immediate) func.apply(context, args);
       };
@@ -105,7 +104,7 @@
       if (callNow) func.apply(context, args);
     };
   }
-  var scrollHeader = debounce(function() {
+  var scrollHeader = debounce(function () {
     if (isScrolledIntoView(banner) && !header.classList.contains("alt")) {
       header.classList.add("alt");
     } else if (
@@ -118,7 +117,7 @@
   window.addEventListener("scroll", scrollHeader);
 })();
 
-(function($) {
+(function ($) {
   "use strict";
   /* Slider Active
 	=============================*/
@@ -140,18 +139,18 @@
     // ],
     responsive: {
       0: {
-        items: 1
+        items: 1,
       },
       600: {
-        items: 2
+        items: 2,
       },
       1280: {
-        items: 3
+        items: 3,
       },
       1500: {
-        items: 4
-      }
-    }
+        items: 4,
+      },
+    },
   });
   var apps = [
     {
@@ -161,7 +160,7 @@
       apple:
         "https://apps.apple.com/us/app/memorize-by-heart-learn-texts/id1436935583",
       google:
-        "https://play.google.com/store/apps/details?id=com.memorize_by_heart"
+        "https://play.google.com/store/apps/details?id=com.memorize_by_heart",
     },
     {
       title: "Hangman",
@@ -169,7 +168,7 @@
         "With over 12,000 downloads in the App Store, this 2 player supported game of hangman is becoming the #1 hangman app in the store. Make your way up the high scores list!",
       apple: "https://itunes.apple.com/us/app/hangman/id1278680007",
       google:
-        "https://play.google.com/store/apps/details?id=com.memorize_by_heart"
+        "https://play.google.com/store/apps/details?id=com.memorize_by_heart",
     },
     {
       title: "Mastermind - Break the Code",
@@ -178,7 +177,7 @@
       apple:
         "https://apps.apple.com/us/app/mastermind-break-the-code/id1435716874",
       google:
-        "https://play.google.com/store/apps/details?id=com.craig.mastermind"
+        "https://play.google.com/store/apps/details?id=com.craig.mastermind",
     },
     {
       title: "Picture Sliding Block Puzzle",
@@ -187,16 +186,8 @@
       apple:
         "https://itunes.apple.com/us/app/picture-sliding-block-puzzle/id1367738676",
       google:
-        "https://play.google.com/store/apps/details?id=com.goodturn.pictureslidingpuzzle"
+        "https://play.google.com/store/apps/details?id=com.goodturn.pictureslidingpuzzle",
     },
-    {
-      title: "Emoji Charades",
-      description:
-        "Emoji Charades is the game night app. You'll be laughing as your friends act out each emoji. Emojis by EmojiOne",
-      apple: "https://itunes.apple.com/us/app/emoji-charades/id1278034351",
-      google:
-        "https://play.google.com/store/apps/details?id=com.goodturn.emojicharadesfree"
-    }
   ];
   var screenshotTitle = $("#screenshot-title");
   var screenshotDescription = $("#screenshot-description");
