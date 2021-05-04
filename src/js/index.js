@@ -197,6 +197,9 @@
   function writeScreenShot(event) {
     var currentScreen = event.item.index % event.item.count;
     var currentApp = apps[currentScreen];
+    if (!currentApp) {
+      return;
+    }
     screenshotTitle.text(currentApp.title);
     screenshotDescription.text(currentApp.description);
     appleLink.attr("href", currentApp.apple);
