@@ -29,7 +29,7 @@
   devicon.setAttribute("rel", "stylesheet");
   devicon.setAttribute(
     "href",
-    "https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css"
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.12.0/devicon.min.css"
   );
   devicon.setAttribute("type", "text/css");
   document.head.appendChild(devicon);

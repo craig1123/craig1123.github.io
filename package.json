@@ -9,6 +9,9 @@
     "build": "gulp build",
     "server": "open -a 'Google Chrome' http://localhost:4040/ && node ./server"
   },
+  "pre-commit": [
+    "build"
+  ],
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "del": "^5.1.0",
@@ -21,7 +24,8 @@
     "gulp-minify-css": "^1.2.4",
     "gulp-uglify": "^3.0.2",
     "gulp-useref": "^4.0.1",
-    "gulp-util": "^3.0.8"
+    "gulp-util": "^3.0.8",
+    "pre-commit": "^1.2.2"
   },
   "dependencies": {}
 }
